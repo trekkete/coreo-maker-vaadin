@@ -1,0 +1,117 @@
+html {
+    --lumo-font-size: 1rem;
+    --lumo-font-size-xxxl: 1.75rem;
+    --lumo-font-size-xxl: 1.375rem;
+    --lumo-font-size-xl: 1.125rem;
+    --lumo-font-size-l: 1rem;
+    --lumo-font-size-m: 0.875rem;
+    --lumo-font-size-s: 0.8125rem;
+    --lumo-font-size-xs: 0.75rem;
+    --lumo-font-size-xxs: 0.6875rem;
+    --lumo-line-height-m: 1.4;
+    --lumo-line-height-s: 1.2;
+    --lumo-line-height-xs: 1.1;
+    --lumo-size-xl: 3rem;
+    --lumo-size-l: 2.5rem;
+    --lumo-size-m: 2rem;
+    --lumo-size-s: 1.75rem;
+    --lumo-size-xs: 1.5rem;
+    --lumo-space-xl: 1.875rem;
+    --lumo-space-l: 1.25rem;
+    --lumo-space-m: 0.625rem;
+    --lumo-space-s: 0.3125rem;
+    --lumo-space-xs: 0.1875rem;
+    --beat-keeper-width: 700px;
+    --separator-size: 9px;
+}
+
+.app-bar-button {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 1.25em;
+}
+
+.app-bar-button:hover {
+    background-color: var(--lumo-primary-color-10pct);
+}
+
+.app-bar-project-title::part(input-field) {
+    background-color: transparent;
+    font-size: 1.75em;
+    border: 1px solid var(--lumo-contrast-5pct);
+    border-radius: 5px;
+}
+
+.app-bar-project-title::part(input-field):hover {
+    border: 1px solid var(--lumo-contrast-20pct);
+    border-radius: 5px;
+}
+
+.app-bar-project-title::part(input-field):hover {
+    border: 1px solid var(--lumo-contrast-80pct);
+    border-radius: 5px;
+}
+
+:host(:hover:not([readonly]):not([focused])) [part="input-field"]::after {
+    opacity: 0;
+}
+
+.app-bar-menu::part(menu-bar-button) {
+    background-color: transparent;
+}
+
+.app-bar-menu::part(menu-bar-button):hover {
+    background-color: var(--lumo-primary-color-10pct);
+}
+
+.app-bar-buttons {
+    border-top: 1px solid var(--lumo-contrast-20pct);
+    border-bottom: 1px solid var(--lumo-contrast-20pct);
+}
+
+.window-title {
+    margin: 0;
+}
+
+.beat-keeper-container {
+    width: var(--beat-keeper-width);
+    height: 70px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.beat-keeper-container::-webkit-scrollbar {
+    display: none;
+}
+
+.beat-keeper-outer-container {
+    border: 1px solid var(--lumo-contrast-20pct);
+    border-radius: 5px;
+}
+
+.beat-keeper-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.beat-keeper-inner-container {
+    height: 100%;
+    padding: 0 calc(var(--beat-keeper-width) / 2 - var(--separator-size));
+}
+
+.beat-keeper-bpm {
+    width: 110px;
+}
+
+.beat-keeper-bpm::part(input-field) {
+    background-color: transparent;
+    font-size: 1.25em;
+}
+
+.beat-keeper-current-step {
+    font-size: 1.75em;
+}
